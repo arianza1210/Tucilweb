@@ -1,0 +1,17 @@
+.container {
+	width: 30%;
+	margin-top: 9%;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+	padding: 40px;
+}
+
+body {
+	margin-bottom: 50%;
+	padding-bottom: : 70%;
+	background: url(img/img1.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+	height: 100px;
+
+}
