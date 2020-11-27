@@ -35,6 +35,8 @@ $routes->match(['get', 'post'], '/auth/login', 'Auth::login');
 $routes->match(['get', 'post'], '/auth/index', 'Auth::index');
 $routes->match(['get', 'post'], '/auth/register', 'Auth::register');
 $routes->match(['get', 'post'], '/auth/admin', 'Auth::admin');
+$routes->match(['get', 'post'], '/auth/about', 'Auth::about');
+$routes->match(['get', 'post'], '/auth/produk', 'Auth::produk');
 $routes->get('auth/logout', 'Auth::logout');
 
 /**

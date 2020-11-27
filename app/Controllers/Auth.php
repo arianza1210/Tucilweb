@@ -16,11 +16,15 @@ class Auth extends BaseController
 
 			$validate = $this->validate($rules);
 			if ($validate) {
+				echo view('layout/header');
+				echo view('layout/footer');
 				return view('auth/index');
 			} else {
 				return redirect()->back()->withInput()->with('validation', $this->validator);
 			}
 		}
+		echo view('layout/header');
+		echo view('layout/footer');
 		return view('auth/login');
 	}
 	public function logout()
@@ -59,21 +63,40 @@ class Auth extends BaseController
 
 			];
 			if ($this->validate($rules)) {
+				echo view('layout/header');
+				echo view('layout/footer');
 				return view('auth/login');
 				//
 			} else {
 				return redirect()->back()->withInput()->with('validation', $this->validator);
 			}
 		}
-
+		echo view('layout/header');
+		echo view('layout/footer');
 		return view('auth/register');
 	}
 	public function admin()
 	{
+		echo view('layout/header_admin');
 		return view('auth/admin');
+		echo view('layout/footer_admin');
 	}
 	public function index()
 	{
+		echo view('layout/header');
+		echo view('layout/footer');
 		return view('auth/index');
+	}
+	public function about()
+	{
+		echo view('layout/header');
+		echo view('layout/footer');
+		return view('auth/about');
+	}
+	public function produk()
+	{
+		echo view('layout/header');
+		echo view('layout/footer');
+		return view('auth/produk');
 	}
 }
